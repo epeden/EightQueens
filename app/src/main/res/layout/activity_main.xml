@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.unc.epeden.eightqueenspuzzlegame.MainActivity"
+    android:nestedScrollingEnabled="true"
+    android:scrollIndicators="right">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Solve the Eight Queens Puzzle!"
+        android:id="@+id/topTextview"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:rowCount="8"
+        android:minHeight="200dp"
+        android:minWidth="200dp"
+        android:columnCount="8"
+        android:id="@+id/myGridLayout">
+
+    </GridLayout>
+
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="I give up. Solve the puzzle."
+        android:id="@+id/giveUpButton"
+        android:minHeight="80dp"
+        android:minWidth="160dp"
+        android:onClick="solvePuzzle"
+        android:layout_below="@+id/myGridLayout"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="false"
+        android:shadowColor="@color/colorPrimary"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset Board"
+        android:id="@+id/button"
+        android:onClick="resetBoard"
+        android:minWidth="120dp"
+        android:minHeight="80dp"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/myGridLayout"
+        android:layout_toRightOf="@+id/giveUpButton"
+        android:shadowColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomTextview"
+        android:textSize="25dp"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentStart="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:text="Clicked:"
+        android:minWidth="150dp"
+        android:layout_below="@+id/giveUpButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click the leftmost column to begin"
+        android:id="@+id/bottomTextview2"
+        android:textSize="20dp"
+        android:minWidth="150dp"
+        android:nestedScrollingEnabled="true"
+        android:maxWidth="300dp"
+        android:maxLines="3"
+        android:layout_below="@+id/bottomTextview"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bottomTextview2"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/bottomTextview2"
+            android:layout_centerHorizontal="true"
+            android:nestedScrollingEnabled="true"
+            android:scrollIndicators="right" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Solve All"
+            android:id="@+id/solveAll"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:onClick="solveAll"
+            android:nestedScrollingEnabled="true"
+            android:scrollIndicators="right" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/textView3"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="427dp"
+        android:layout_marginStart="427dp"
+        android:layout_marginBottom="75dp" />
+
+</RelativeLayout>
